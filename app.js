@@ -2,9 +2,10 @@
 
 const btn1 = document.querySelector('#btn1');
 const btn2 = document.querySelector('#btn2');
-const reset = document.querySelector('#reset');
+const resetBtn = document.querySelector('#reset');
 const player1 = document.querySelector('#player1');
 const player2 = document.querySelector('#player2');
+const selectWinningScore = document.querySelector('#playto');
 
 let p1Score = 0; /* starting point should be zero for players
   */
@@ -37,10 +38,19 @@ btn2.addEventListener('click', function() {
 }
 })
 
-reset.addEventListener('click', () => {
-      isGameOver = false;
-       p1Score = 0;
-       p2Score = 0;/*  restarts the scores so that begin from zero */
-       player1.textContent = 0; /* display zero  */
-       player2.textContent = 0;
+resetBtn.addEventListener('click', reset)
+
+function reset() {
+    isGameOver = false;
+    p1Score = 0;
+    p2Score = 0;/*  restarts the scores so that begin from zero */
+    player1.textContent = 0; /* display zero  */
+    player2.textContent = 0;
+}
+
+selectWinningScore.addEventListener('change',  function() {
+   winnigScore = parseInt(this.value);
+    reset();
+
+
 })
