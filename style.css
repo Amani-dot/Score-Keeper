@@ -7,6 +7,8 @@
 body{
     font-family:sans-serif;
     min-height: 100vh;
+    background-color: rgb(26, 25, 25)/* rgb(1, 44, 112) */;
+    max-width:1200px;
 }
 
 .container{
@@ -14,14 +16,19 @@ body{
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
-    /* min-width:1200px; */
     height: fit-content;
-    outline: 1px solid black;
+    text-align: center;
+    background-color: rgb(53, 52, 52)/* rgb(21, 99, 224) */;
+    color: rgb(219, 217, 217);
+    border: none;
+    border-radius: 15px;
+    font-size: 0.9em;
 }
 
 img {
    height: 300px;
-   width:450px
+   width:450px;
+   border-radius: 15px 15px 0 0;
 }
 
 .winner{
@@ -30,4 +37,44 @@ img {
 
 .loser{
     color: red;
+}
+h1{
+    color: black;
+    font-weight: bold;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    display: block;
+    /* outline: 1px solid red; */
+}
+
+.btns{
+    padding: 10px 20px;
+    background-color:rgb(1, 44, 112);;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    z-index: 1;
+}
+
+#btn1{
+    background-color: green;
+}
+#btn2{
+    background-color: blue;
+}
+
+#reset{
+    background-color: red;
+}
+
+select{
+    padding: 10px 20px;
+    border: none;
+    margin-top: 20px;
+    border-radius:10px;
+    font-size: 0.9em;
 }
